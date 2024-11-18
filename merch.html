@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>F1 Fans</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+<body>
+<section class="sub-header">
+    <nav>
+        <a href="index.html"><img src="images/logo.png" width="150" height="auto"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick = "hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="merch.html">COURSES</a></li>
+                <li><a href="portal.html">PORTAL</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <h1>NextGen Insight</h1>
+</section>
+
+<!-----teams and drivers------>
+
+<section class="team">
+    <h1>Courses Offered</h1>
+    <p>Explore a wide range of courses designed to equip you with the skills and knowledge needed for success in today’s fast-evolving world.</p>
+
+    <!-- First Row -->
+    <div class="row">
+        <div class="team-col">
+            <img src="images/ML.jpg">
+            <div class="layer">
+                <h3>MACHINE LEARNING</h3>
+            </div>
+        </div>
+        <div class="team-col">
+            <img src="images/AI.jpg">
+            <div class="layer">
+                <h3>ARTIFICIAL INTELLIGENCE</h3>
+            </div>
+        </div>
+        <div class="team-col">
+            <img src="images/DS.jpg">
+            <div class="layer">
+                <h3>DATA SCIENCE</h3>
+            </div>
+        </div>
+        <div class="team-col">
+            <img src="images/CC.jpg">
+            <div class="layer">
+                <h3>CLOUD COMPUTING</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- Second Row -->
+    <div class="row">
+        <div class="team-col">
+            <img src="images/CF.jpg">
+            <div class="layer">
+                <h3>CYBERSECURITY FUNDAMENTALS</h3>
+            </div>
+        </div>
+        <div class="team-col">
+            <img src="images/DA.jpg">
+            <div class="layer">
+                <h3>DATA ANALYTICS</h3>
+            </div>
+        </div>
+        <div class="team-col">
+            <img src="images/AD.jpg">
+            <div class="layer">
+                <h3>APP DEVELOPMENT</h3>
+            </div>
+        </div>
+        <div class="team-col">
+            <img src="images/WD.jpg">
+            <div class="layer">
+                <h3>WEB DEVELOPMENT</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-----Merchandise------>
+
+<section class="merch">
+    <h1>NextGen Academy Merchandise</h1>
+    <p>Shop exclusive now, from apparel to tech gear, designed for success.</p>
+
+    <div class="row">
+        <div class="merch-col">
+            <img src="images/hoodie.jpg">
+            <h3>For Hoodie Lover</h3>
+            <p>Scuderia NextGen Hooded Sweat Jacket</p>
+        </div>
+        <div class="merch-col">
+            <img src="images/VR.jpg">
+            <h3>For Virtual Watchers</h3>
+            <p>Scuderia NextGen VR set</p>
+        </div>
+        <div class="merch-col">
+            <img src="images/bag.jpg">
+            <h3>For Heavy Packers</h3>
+            <p>Scuderia NextGen Exclusive Bag</p>
+        </div>
+    </div>
+</section>
+
+<!-----Footer------>
+
+<section class="footer">
+    <h4>About Us</h4>
+    <p>All Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <div class="icons">
+        <a href="https://www.facebook.com/share/SJc9gPPgVUEFXyEF/?mibextid=LQQJ4d" target="_blank">
+            <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://x.com/f1?s=21" target="_blank">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/f1?igsh=b2Y1dzl1b2QzaWJr" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+    </div>
+    <div class="starstrike">
+        <p>Made with <i class="far fa-heart"></i> by afqhs</p>
+    </div>
+</section>
+
+
+<!-----JavaScript for Toggle Menu------>
+
+<script>
+
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right="0";
+    }
+    function hideMenu(){
+        navLinks.style.right="-200px";
+    }
+</script>
+
+<!-----JavaScript for Countdown------>
+
+    <script>
+        var target_mili_sec = new Date("Sep 22, 2024 20:00:00").getTime();
+        function timer() {
+            var now_mili_sec=new Date().getTime();
+            var remaining_sec=Math.floor ( (target_mili_sec - now_mili_sec)/1000);
+
+            var day =Math.floor(remaining_sec / (3600*24));
+            var hour =Math.floor((remaining_sec % (3600*24)) / 3600);
+            var min =Math.floor((remaining_sec % 3600)/60);
+            var sec =Math.floor(remaining_sec % 60);
+
+            document.querySelector("#day").innerHTML=day;
+            document.querySelector("#hour").innerHTML=hour;
+            document.querySelector("#min").innerHTML=min;
+            document.querySelector("#sec").innerHTML=sec;
+        }
+            setInterval(timer, 1000);
+            timer();
+
+    </script>
+
+
+
+</section>
+
+
+</body>
+</html>
